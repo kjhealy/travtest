@@ -1,2 +1,10 @@
 language: r
 sudo: required
+
+r_packages:
+ - ggplot2
+ - knitr
+ - rmarkdown
+
+r_github_packages:
+ - jimhester/lintr
