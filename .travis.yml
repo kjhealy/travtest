@@ -47,9 +47,6 @@ install:
   - Rscript -e 'update.packages(ask = FALSE, instlib = "~/Rlib")'
 
 
-# Build and check package
+# Lint
 script:
-  - R CMD build . --no-build-vignettes --no-manual
-  - PKG_FILE_NAME=$(ls -1t *.tar.gz | head -n 1)
-  - R CMD check "${PKG_FILE_NAME}" --no-build-vignettes --no-manual --as-cran 
   - ./travis-linter.sh
