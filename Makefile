@@ -12,7 +12,7 @@ PURL=$(RMDS:.Rmd=.R)
 purl:	$(PURL)
 
 %.R: %.Rmd
-	Rscript -e "require(knitr); purl('$<')"; Rscript -e "require(lintr); lint('$@')"
+	Rscript -e "require(knitr); purl('$<')"
 
 
 .PHONY: clean
