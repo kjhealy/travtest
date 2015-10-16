@@ -1,7 +1,7 @@
 language: r
 sudo: required
 
-r_github_packages:
- - jimhester/lintr
+r_packages:
+ - lintr
 
 script: ./travis-linter.sh
