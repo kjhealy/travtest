@@ -1,5 +1,5 @@
 # .travis.yml using container-based infrastructure
-# travis file courtesy of Jan Tilly: jtilly/R-travis-container-example
+# travis file courtesy of Jan Tilly: https://github.com/jtilly/R-travis-container-example
 
 # use c as catch-all language
 language: c
@@ -45,7 +45,7 @@ install:
   - Rscript -e 'if(!"devtools" %in% rownames(installed.packages())) { install.packages("devtools", dependencies = TRUE) }'
   - Rscript -e 'if(!"covr" %in% rownames(installed.packages())) { install.packages("covr", dependencies = TRUE) }'
   - Rscript -e 'update.packages(ask = FALSE, instlib = "~/Rlib")'
-  - Rscript -e 'devtools::install_deps(pkg = ".", dependencies = TRUE)'
+
 
 # Build and check package
 script:
